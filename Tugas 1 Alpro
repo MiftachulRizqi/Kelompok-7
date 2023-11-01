@@ -76,7 +76,7 @@ while True:
     subtotal = harga_pizza[pizza][ukuran] * jumlah
     total_harga += subtotal
 
-    extra_cheese = input("Apakah anda ingin menambah extra cheese (y/n): ")
+    extra_cheese = input("Apakah anda ingin menambah extra cheese dengan harga Rp. 13.636 (y/n): ")
     #biaya_extra_cheese = 0
     if extra_cheese.lower() == 'y':
         biaya_extra_cheese = 13.636  # Harga extra cheese
@@ -90,10 +90,9 @@ print(f"Ukuran: {ukuran}                         ")
 print(f"Jumlah: {jumlah}                         ")
 print(f"Total Harga: {subtotal}                  ")
 print(f"Harga extra cheese : {biaya_extra_cheese}")
-print("=================================================================")
+print("==================================================================")
 print(f"Total Pesanan: {Total_biaya_akhir}")
 
-print("==============================================")
-print("|Thank you for choosing Pizza Hut Deliveries!|") 
-print("==============================================")
-
+print("==================================================================")
+print("|           Thank you for choosing Pizza Hut Deliveries!         |") 
+print("==================================================================")
