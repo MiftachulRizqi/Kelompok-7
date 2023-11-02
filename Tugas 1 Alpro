@@ -62,3 +62,44 @@ harga_pizza = {
     "Super Supreme Chicken dengan Crust Crown Crust": {"Personal": 55455, "Regular": 120910, "Large": 160000},
 }
 
+total_harga = 0
+while True:
+    pizza = input("Masukan nama varian Pizza yang ingin di pesan: ")
+    if pizza not in harga_pizza:
+        print("Maaf, jenis pizza tidak ada di menu. Silakan coba lagi.")
+        continue
+
+    ukuran = input("Pilih ukuran Pizza (Personal/Regular/Large): ")
+    if ukuran not in harga_pizza[pizza]:
+        print("Maaf, ukuran tidak valid. Silakan coba lagi.")
+        continue
+
+    jumlah = int(input("Masukkan jumlah: "))
+    subtotal = harga_pizza[pizza][ukuran] * jumlah
+    total_harga += subtotal
+        
+    extra_cheese = input("Apakah anda ingin menambah extra cheese (y/n): ")
+    #biaya_extra_cheese = 0
+    if extra_cheese.lower() == 'y':
+        biaya_extra_cheese = 13636  # Harga extra cheese
+        Total_biaya_akhir = total_harga + biaya_extra_cheese
+        print(f"Jika menambah extra cheese maka akan dikenakan biaya tambahan Rp. 13.636")
+        break
+
+    elif extra_cheese.lower() =='n':
+        Total_biaya_akhir = total_harga + 0
+        print(f"OK")
+        break
+
+# Menampilkan struk pembayaran
+print("\n====================== Struk Pembayaran ==========================")
+print(f"Jenis Pizza: {pizza}                     ")
+print(f"Ukuran: {ukuran}                         ")
+print(f"Jumlah: {jumlah}                         ")
+print(f"Total Harga: Rp. {subtotal}              ")
+print("==================================================================")
+print(f"Total Pesanan: Rp. {Total_biaya_akhir}   ")
+
+print("==================================================================")
+print("|           Thank you for choosing Pizza Hut Deliveries!         |") 
+print("==================================================================")
