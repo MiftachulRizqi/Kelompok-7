@@ -1,4 +1,33 @@
-Hardle 3
+Hurdle 1
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def lompat():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+lompat()
+lompat()
+lompat()
+lompat()
+lompat()
+lompat()
+
+Hurdle 2
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+Hurdle 3
 def turn_right():
     turn_left()
     turn_left()
@@ -11,7 +40,7 @@ def lompat():
     move()
     turn_right()
     move()
-    turn_left() # Rama
+    turn_left() 
 
 while not at_goal():#diulangi selama tidak di goal
     if wall_in_front():
@@ -27,7 +56,7 @@ def turn_right():
 
 def round_corner():
     turn_right()
-    move() # Aji
+    move() 
     turn_right()
 
 def jump():
@@ -43,4 +72,4 @@ while not at_goal():
     if wall_in_front():
         jump()
     else:
-        move() #Rizqi
+        move() 
